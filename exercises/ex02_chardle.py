@@ -50,7 +50,7 @@ def contains_char(word: str, letter: str) -> None:
     if (
         occurrence == 0
     ):  # if there were none, I want it to print "no instances" rather than "0 instances"
-        print("No instances of" + letter + " found in " + word)
+        print("No instances of " + letter + " found in " + word)
     elif (
         occurrence == 1
     ):  # I realized that instance shouldn't be plural if there was one match found.
