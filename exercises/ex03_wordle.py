@@ -7,7 +7,7 @@ def input_guess(secret_word_len: int) -> str:
     word: str = input(f"Enter a {secret_word_len} character word: ")
     while len(word) != secret_word_len:
         # the while loop will have it keep looping back and asking to try again if the length of the input word doesn't match the secret word length
-        word: str = input(f"That wasn't {secret_word_len} chars! Try again: ")
+        word = input(f"That wasn't {secret_word_len} chars! Try again: ")
     return word
 
 
@@ -51,11 +51,11 @@ def main(secret: str) -> None:
     # keeps track of the attempts until it reaches 6 so the program can exit the while loop
     while attempts <= 6:
         print(f"=== Turn {attempts}/6 ===")
-        guess: str = input_guess(
+        guess_user: str = input_guess(
             secret_word_len=len(secret)
         )  # I created another variable equal to the guess so I could assign it as an argument to the parameter user_guess for function emojified
-        print(emojified(user_guess=guess, secret_word=secret))
-        if guess == secret:
+        print(emojified(user_guess=guess_user, secret_word=secret))
+        if guess_user == secret:
             print(f"You won in {attempts}/6 turns!")
             return None  # this return line will have the program exit the function box if the word is guessed correctly
         attempts += 1
