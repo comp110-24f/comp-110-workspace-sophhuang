@@ -9,4 +9,4 @@ for pet_name in pets:
 names: list[str] = ["Alyssa", "Janet", "Vrinda"]
 #print each index name
 for idx in range(0,len(names)):
-    print(f"{names[idx]}: {names{idx}}")
+    print(f"{idx}: {names{idx}}")
